@@ -5,16 +5,37 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './Components/register/register.component';
+import { LoginComponent } from './Components/login/login.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatTableModule} from '@angular/material/table';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule} from '@angular/forms';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    ForgotpasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,FormsModule,MatCardModule,MatSnackBarModule,MatExpansionModule,MatBadgeModule,
+    MatTableModule,MatTooltipModule,MatToolbarModule,MatButtonModule,MatIconModule,MatFormFieldModule,
+    ReactiveFormsModule,MatRadioModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
