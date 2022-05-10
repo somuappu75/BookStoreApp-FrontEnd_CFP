@@ -11,7 +11,6 @@ import { UserServiceService } from 'src/app/Service/UserService/user-service.ser
 export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
-  submitted = false;
 
   category:any;
 
@@ -23,29 +22,30 @@ export class RegisterComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       phone: ['', Validators.required],
-      service:['advance']
     }); 
   }
 
-  admin(){
-    this.category = true;
-  }
+  // admin(){
+  //   this.category = true;
+  // }
 
-  userReg(){
-    this.category = false;
-  }
+  // userReg(){
+  //   this.category = false;
+  // }
 
   onSubmit(){
-    this.submitted=true;
-    console.log("inputs", this.registerForm.value);
+    // console.log("inputs", this.registerForm.value);
     if(this.registerForm.valid){
       console.log("valid",this.registerForm.value);
       let data= {
-          fullName:this.registerForm.value.fullName,
-          email:this.registerForm.value.email,
-          password:this.registerForm.value.password,
-          phone:this.registerForm.value.phone,
+        FullName:this.registerForm.value.fullName,
+        Email:this.registerForm.value.email,
+          Password:this.registerForm.value.password,
+          MobileNumber:this.registerForm.value.phone,
       }
+      this.user.register(data).subscribe((res:any)=>{
+        console.log(res);
+      })
       // if(this.category == true){
       //   this.user.adminRegister(data).subscribe((response:any)=>{
       //     console.log(response); 
