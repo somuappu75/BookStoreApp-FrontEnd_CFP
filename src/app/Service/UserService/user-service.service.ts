@@ -17,4 +17,13 @@ export class UserServiceService {
     }
     return this.httpservice.postService("https://localhost:44305/api/User/Register",reqdata,false,header)
   }
+  login(reqdata:any){
+  
+    let header ={
+      headers: new HttpHeaders({
+        'Content-type': 'application/json'      
+      })
+    }
+    return this.httpservice.postService("https://localhost:44305/api/User/Login",reqdata,false,header)
+  }
 }

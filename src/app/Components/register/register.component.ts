@@ -11,6 +11,7 @@ import { UserServiceService } from 'src/app/Service/UserService/user-service.ser
 export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
+  submitted = false;
 
   category:any;
 
@@ -34,9 +35,10 @@ export class RegisterComponent implements OnInit {
   // }
 
   onSubmit(){
-    // console.log("inputs", this.registerForm.value);
+    this.submitted=true;
+    console.log("inputs", this.registerForm.value);
     if(this.registerForm.valid){
-      console.log("valid",this.registerForm.value);
+      console.log("valid-Details",this.registerForm.value);
       let data= {
         FullName:this.registerForm.value.fullName,
         Email:this.registerForm.value.email,
