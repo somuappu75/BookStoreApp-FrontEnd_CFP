@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassword.component';
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,MatCardModule,MatSnackBarModule,MatExpansionModule,MatBadgeModule,
     MatTableModule,MatTooltipModule,MatToolbarModule,MatButtonModule,MatIconModule,MatFormFieldModule,
-    ReactiveFormsModule,MatRadioModule,HttpClientModule
+    ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

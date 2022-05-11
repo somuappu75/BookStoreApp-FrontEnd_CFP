@@ -26,4 +26,12 @@ export class UserServiceService {
     }
     return this.httpservice.postService("https://localhost:44305/api/User/Login",reqdata,false,header)
   }
+  forget(data:any){
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json'
+      })
+    }
+   return this.httpservice.postService("https://localhost:44305/api/User/ForgotPassword?email="+data.email, {}, false, header)
+  }
 }
