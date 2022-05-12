@@ -22,6 +22,8 @@ import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassw
 import {MatRadioModule} from '@angular/material/radio';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
+import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import {MatInputModule} from '@angular/material/input';
     RegisterComponent,
     LoginComponent,
     ForgotpasswordComponent,
+    ResetPasswordComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

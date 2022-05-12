@@ -1,0 +1,30 @@
+<!-- <p>dashboard works!</p> -->
+<div class="example-container" fxLayout="column">
+    <mat-toolbar class="example-toolbar">
+      <div class="book_image" fxLayout="row">
+        <img class="book_image" src="..\..\..\..\assets\images\education.svg">
+      </div>
+      <div fxLayout="row" fxLayout.xs="row">
+        <h1 class="example-app-name" routerLink="/dashboard/allbooks">Bookstore</h1>
+      </div>
+  
+      <div class="div_wrraper">
+        <form class="from_wrraper">
+          <div class="search">
+            <input type="text" class="searchfrom" autocomplete="off" placeholder="Search">
+          </div>
+          <img class="search_image" src="../../../assets/images/search_black_24dp.svg">
+        </form>
+      </div>
+  
+      <div class="img-person">
+        <img src="../../../assets/images/person_FILL0_wght400_GRAD0_opsz48.svg">
+      </div>
+  
+      <div class="img-cart" routerLink="/dashboard/cart" fxLayout="column">
+      
+        <span matBadge={{cartQuantity}} matBadgePosition="after" matBadgeColor="warn" [matBadgeHidden]="cartQuantity==0">  <img src="../../../assets/images/supermarket.svg" ></span>
+      </div>
+  
+  </mat-toolbar>
+  <router-outlet></router-outlet>

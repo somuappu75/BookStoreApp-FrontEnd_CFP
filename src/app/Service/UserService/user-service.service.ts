@@ -34,4 +34,13 @@ export class UserServiceService {
     }
    return this.httpservice.postService("https://localhost:44305/api/User/ForgotPassword?email="+data.email, {}, false, header)
   }
+  reset(data:any){
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJqYW50bzQxMTVAZ21haWwuY29tIiwiSWQiOiIxNiIsImV4cCI6MTY0OTQwOTgxOX0.mb4_4pswCHCEbPROI2vUC1Ffciwg7l4mti5LZTCNago' 
+      })
+    }
+   return this.httpservice.putService("https://localhost:44322/api/User/ResetPassword", data, true, header)
+  }
 }
