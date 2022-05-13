@@ -10,7 +10,6 @@ import { UserServiceService } from 'src/app/Service/UserService/user-service.ser
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  // submitted = false;
 
   constructor( private formbuilder:FormBuilder,private user:UserServiceService,private router:Router) { }
 
@@ -22,8 +21,7 @@ export class LoginComponent implements OnInit {
   }
   
   onSubmitloginForm(){
-    // this.submitted=true;
-    console.log("inputs", this.loginForm.value);
+    console.log("Login-inputs", this.loginForm.value);
     if(this.loginForm.valid){
       console.log("valid-Creditionals",this.loginForm.value);
       let data= {
