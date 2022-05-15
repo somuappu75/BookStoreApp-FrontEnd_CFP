@@ -1,15 +1,14 @@
-<!-- <p>dashboard works!</p> -->
 <div style="width: 100%; height: 100%;" >
   <mat-toolbar class="tool" fxLayout="row" fxLayoutAlign="space-between center" >
     <div class="titleText" fxLayout="row" fxLayoutGap="2%"  >
-      <img src="../../../assets/Book.png" />
-      <a style="color: white;">BookStore</a>
+     
+      <a  id="move" style="color: white;"><img src="../../../assets/images/BookCover.png" />BookStore</a>
       </div>
     <mat-card class="search-mat-card" fxLayout="row"fxLayoutAlign="space-around center" >
           <button mat-icon-button  >
             <mat-icon class="searchIcon" >search</mat-icon>
           </button>
-          <input  class="searchInput"   type="text" name="search" placeholder="Search.." #search (keyup)="clearFilter(search.value)"/>
+          <input  class="searchInput"   type="text" name="search" placeholder="Search.." #search />
           <!-- <input class="searchInput" type="text" name="search" placeholder="Search" #search
               (keyup)="clearFilter(search.value)" fxHide.xs fxHide.sm> -->
         </mat-card>
@@ -21,25 +20,25 @@
     <p>To access account and manage orders</p>
     <button mat-menu-item >
       <div style="text-align:center">
-        <button mat-button class="login">Logout</button>
+        <button mat-button class="login" (click)="Logout()">Logout</button>
        </div>
     </button>
     
     <mat-divider></mat-divider>
     <div style="text-align:center">
-    <button  mat-button class="Orders">MyOrders
+    <button  mat-button class="Orders" (click)="orders()">MyOrders
       <mat-icon>shopping_cart</mat-icon>
    
     </button>
 
     <div style="text-align:center">
-      <button  mat-button class="Orders">MyWishlist
+      <button  mat-button class="Orders" (click)=" wishlist()">MyWishlist
         <mat-icon>favorite</mat-icon>
       </button>
     </div>
     <div style="text-align:center">
-      <button  mat-button class="Orders1">Adminpage
-        <img  class="admin" src="../../../assets/blogger.png" />
+      <button  mat-button class="Orders1" (click)=" Admin()">Adminpage
+        <!-- <img  class="admin" src="../../../assets/images/Image 11@2x.png" /> -->
       </button>
       
     </div>

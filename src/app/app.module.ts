@@ -24,6 +24,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatInputModule} from '@angular/material/input';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import {MatListModule} from '@angular/material/list';
+import {   MatMenuModule } from '@angular/material/menu';
+import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
 
 
 @NgModule({
@@ -34,13 +37,14 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
     ForgotpasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
+    GetallbooksComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,MatCardModule,MatSnackBarModule,MatExpansionModule,MatBadgeModule,
     MatTableModule,MatTooltipModule,MatToolbarModule,MatButtonModule,MatIconModule,MatFormFieldModule,
-    ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule
+    ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule,MatListModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
