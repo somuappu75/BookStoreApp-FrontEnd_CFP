@@ -45,10 +45,5 @@ export class DashboardComponent implements OnInit {
   {
     this.route.navigateByUrl("/dashboard/admin") 
   }
-  // clearFilter(search: any) {  // This is done for search pipe part in getallbooks and dashboard
-  //   console.log(search);  //this .target.value is coming from console
-  //   this.dataservice.sendData(search) // done for search pipe & this .target.value is coming from console
-  // }
-
 
 }

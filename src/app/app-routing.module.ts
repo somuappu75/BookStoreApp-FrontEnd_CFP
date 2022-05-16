@@ -6,9 +6,11 @@ import { ForgotpasswordComponent } from './Components/forgotpassword/forgotpassw
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
+import { AddbookComponent } from './Components/addbook/addbook.component';
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
+  {path:'addbook',component:AddbookComponent},
   {path:'forgot',component:ForgotpasswordComponent},
   {path:'reset',component:ResetPasswordComponent},
   {path:'dashboard',component:DashboardComponent,

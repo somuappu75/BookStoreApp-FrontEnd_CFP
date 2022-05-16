@@ -1,0 +1,36 @@
+<div>
+    <div class="container">
+      <div>
+        <button class="btn-add"><b>Add Book</b></button>
+    </div>
+        <table>
+            <tr>
+              <th>Sr.No</th>
+              <th>BookImage</th>
+              <th>BookName</th>
+              <th>AuthorName</th>
+              <th>Price</th>
+              <th>DiscountPrice</th>
+              <th>Quantity</th>
+              <!-- <th>Action</th> -->
+            </tr>
+            <tr *ngFor="let book of booklist">
+              <td>1</td>
+              <td><img class="img"src="../../../assets/images/Image 11@2x.png" alt=""></td>
+             <td> {{book.bookName}}</td>
+              <td>{{book.authorName}}</td>
+              <td>{{book.actualPrice}}</td>
+              <td>{{book.discountPrice}}</td>
+              <td>{{book.quantity}}</td>
+              <!-- <td class="action">
+                  <span style="color: #3371B5; font-size: 14px;"><b>Edit</b></span>
+                  <span style="color: red; font-size: 14px;"><b>Delete</b></span>
+              </td> -->
+            </tr>           
+        </table>
+    </div>
+</div>
+
+<ng-template #template>
+  <button type="button" class="close p-2 m-n2 text-white" aria-label="Close"></button>
+</ng-template> 

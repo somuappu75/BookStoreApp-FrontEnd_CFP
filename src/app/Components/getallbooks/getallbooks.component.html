@@ -1,28 +1,15 @@
-<div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.sm="row" fxLayout.xs="row">
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayout="row" fxLayout.xs="row">
 
     <div class="bookandCount">
         <span class="books">Books</span>
         <span class="count"></span>
     </div>
-  
-     <!-- <div class="sortbyrelevance">
-        <mat-form-field appearance="outline">
-            <mat-label>Sort by relevance</mat-label>
-             <mat-select class="matselect">
-                <mat-option style="color: #a03037;" (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
-                <mat-option style="color: #a03037;" (click)=" hightolow()" value="two">Price:High to Low</mat-option>
-                <mat-option style="color: #a03037;"  value="third">Newest Arrivals</mat-option>
-            </mat-select> 
-        </mat-form-field>
-    </div> -->
 
-  </div>
+   </div>
   
-  <div fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="15px">
-    <div class="entirebook"
-    *ngFor="let book of booklist " fxLayout.sm="column">
+  <div fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="15px" fxLayout="row">
+    <div class="bookdata" *ngFor="let book of booklist " fxLayout="column">
         <div class="bookimg">
-            <!-- this (book) is coming from ngFor (let book) as we are storing aur bookname, author etc in book -->
             <img class="img1" src="../../../assets/images/Image 11@2x.png" alt="">
         </div>
         <div class="bookname">
@@ -43,8 +30,8 @@
             <div class="discountprice">
                 Rs.{{book.discountPrice}}
             </div>
-            <div class="originalprice">
-                <del> Rs.{{book.originalPrice}} </del> <!-- <del> tag is used to show the removal from document-->
+            <div class="ActualPrice">
+                <del> Rs.{{book.actualPrice}} </del>
             </div>
         </div>
   
@@ -73,3 +60,4 @@
   <div class="pagination" fxLayoutAlign="center center">
     <!-- <pagination-controls class="text-center my-pagination" (pageChange)="page = $event" ></pagination-controls> -->
   </div>
+  

@@ -27,6 +27,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import {MatListModule} from '@angular/material/list';
 import {   MatMenuModule } from '@angular/material/menu';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
+import { AddbookComponent } from './Components/addbook/addbook.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { GetallbooksComponent } from './Components/getallbooks/getallbooks.compo
     ResetPasswordComponent,
     DashboardComponent,
     GetallbooksComponent,
+    AddbookComponent,
   ],
   imports: [
     BrowserModule,

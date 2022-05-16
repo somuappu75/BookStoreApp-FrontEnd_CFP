@@ -25,4 +25,24 @@ export class BookserviceService {
    }
    return this.httpService.getService("https://localhost:44305/api/Book/Get", true,header)
  }
+ adminaddbook(data: any) {
+  this.token = localStorage.getItem("token")
+  let header = {
+    headers: new HttpHeaders({
+      'content-Type': 'application/json',
+      'x-access-token': this.token
+    })
+  }
+  return this.httpService.postService("https://localhost:44305/api/Book/Add", data, true, header)
+}
+deletebook(productID: any,token:any) {
+  console.log(this.token,productID)
+  let header = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization':'Bearer'+this.token,   // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+    })
+  }
+  return this.httpService.deleteService('Book/deletebook?BookId=' + productID, true, header)
+}
 }

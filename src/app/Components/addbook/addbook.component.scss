@@ -1,0 +1,41 @@
+.container{
+    padding-bottom: 50px;
+}
+
+.btn-add{
+    margin-left: 77%;
+    margin-top: 10px;
+    background-color: #3371B5;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+th, td{
+    padding: 15px;
+}
+th{
+    background-color: rgb(209, 203, 203);
+}
+
+.action span{
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+.img{
+    height: 40px;
+    width:40px;
+}
