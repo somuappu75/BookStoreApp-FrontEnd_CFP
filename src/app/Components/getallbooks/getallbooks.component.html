@@ -1,14 +1,15 @@
+
 <div fxLayout="row" fxLayoutAlign="space-between center" fxLayout="row" fxLayout.xs="row">
 
-    <div class="bookandCount">
+    <div class="bookaligncount">
         <span class="books">Books</span>
-        <span class="count"></span>
+        <span class="count">({{booksCount}} items)</span>
     </div>
 
    </div>
   
-  <div fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="15px" fxLayout="row">
-    <div class="bookdata" *ngFor="let book of booklist " fxLayout="column">
+   <div class="books_list" fxLayout="row" fxLayoutAlign="center center">
+    <div class="bookdata" *ngFor="let book of booklist " fxLayout.sm="column">
         <div class="bookimg">
             <img class="img1" src="../../../assets/images/Image 11@2x.png" alt="">
         </div>

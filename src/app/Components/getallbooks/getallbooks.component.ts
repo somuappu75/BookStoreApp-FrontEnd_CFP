@@ -25,9 +25,10 @@ export class GetallbooksComponent implements OnInit {
     this.book.getallbooks().subscribe((res:any)=>{
       console.log("res ===",res);
       this.booklist=res.response;
-      // this.booksCount=res.result.length;
+       this.booksCount=res.response.length;
       //  console.log("booklist fetched",this.booklist);
        console.log("BookData",this.booklist);
+        console.log("booklist length",this.booksCount);
       
     }),
       (    error: any)=>{

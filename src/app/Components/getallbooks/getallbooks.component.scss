@@ -1,5 +1,5 @@
-.bookandCount{
-    margin-left: 134px; 
+.bookaligncount{
+    margin-left: 101px; 
     margin-top: 45px;
   }
   .books{
@@ -35,7 +35,7 @@
     // margin-right: 65%;
     margin: 20px;
   }
-  .entirebook:hover{
+  .bookdata:hover{
     box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
     
   }
@@ -141,3 +141,10 @@
   #move{
     margin-left: 110px;
   }
+  .books_list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 4;
+    margin-left: 80px;
+    margin-right: -86px;
+}
