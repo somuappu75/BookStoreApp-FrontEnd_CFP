@@ -1,0 +1,76 @@
+.section{
+    background-color: gray;
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-top: 50px;
+
+
+    width: 80%;
+    height: 800px;
+}
+.matcard{
+    border: 1px solid whitesmoke;
+    background-color:#F5F5F5; 
+     margin-right: -20px;
+
+     
+
+    // padding-bottom: 10px; 
+    display: flex; 
+    position: relative;
+     top: 20px; 
+    //  left: ;
+     right: 3%;
+     margin-left: 28%;
+     margin-top: 2px;
+     border-radius: 8px;
+
+
+     width: 550px;
+     height: 800px;
+}
+
+.update{
+    //  border: 1px solid red;
+     margin-top:5px;
+     position: relative;
+    //  top: -130px;
+    
+}
+h2{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.form{
+    //  border: 1px solid gray;
+     border-radius: 8px;
+    margin-left: 150px;
+    margin-right: 10px;
+    width: 500px;
+    height: 700px;
+    margin-top: 20px;
+    // font-weight: 60;
+}
+
+.label{
+    margin-left: 10px;
+    color:black;
+}
+
+
+.buttonclose{
+    border: 1px solid gainsboro;
+    width: 100px;
+    height: 36px;
+    margin-top: 2px;
+}
+adjustsection{
+    margin-right:300px;
+}
+// .buttonadd{
+//     color: blueviolet;
+// }
+// .bookname{
+//      border: 1px solid gray;
+// }

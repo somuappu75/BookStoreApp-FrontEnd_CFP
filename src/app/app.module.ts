@@ -28,6 +28,8 @@ import {MatListModule} from '@angular/material/list';
 import {   MatMenuModule } from '@angular/material/menu';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
 import { AddbookComponent } from './Components/addbook/addbook.component';
+import { QuickviewComponent } from './Components/quickview/quickview.component';
+import { BookandupdateComponent } from './Components/bookandupdate/bookandupdate.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { AddbookComponent } from './Components/addbook/addbook.component';
     DashboardComponent,
     GetallbooksComponent,
     AddbookComponent,
+    QuickviewComponent,
+    BookandupdateComponent,
   ],
   imports: [
     BrowserModule,

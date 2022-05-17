@@ -12,7 +12,7 @@
               <th>Price</th>
               <th>DiscountPrice</th>
               <th>Quantity</th>
-              <!-- <th>Action</th> -->
+               <th>Action</th>
             </tr>
             <tr *ngFor="let book of booklist">
               <td>1</td>
@@ -21,16 +21,16 @@
               <td>{{book.authorName}}</td>
               <td>{{book.actualPrice}}</td>
               <td>{{book.discountPrice}}</td>
-              <td>{{book.quantity}}</td>
-              <!-- <td class="action">
-                  <span style="color: #3371B5; font-size: 14px;"><b>Edit</b></span>
-                  <span style="color: red; font-size: 14px;"><b>Delete</b></span>
-              </td> -->
+              <td>{{book.bookQuantity}}</td>
+               <td class="action">
+                <button><span style="color: #3371B5; font-size: 14px;"><b>Edit</b></span></button>&nbsp;
+                <button><span style="color: red; font-size: 14px;"><b>Delete</b></span></button>
+              </td>
             </tr>           
         </table>
     </div>
 </div>
 
 <ng-template #template>
-  <button type="button" class="close p-2 m-n2 text-white" aria-label="Close"></button>
+  <button type="button" class="close p-2 m-n2 text-white" aria-label="Close">Close</button>
 </ng-template> 

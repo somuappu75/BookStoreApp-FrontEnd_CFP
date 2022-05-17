@@ -43,7 +43,7 @@ export class DashboardComponent implements OnInit {
   }
   Admin()
   {
-    this.route.navigateByUrl("/dashboard/admin") 
+    this.route.navigateByUrl("/dashboard/addbook") 
   }
 
 }
