@@ -2,6 +2,7 @@ import { HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpServiceService } from '../httpService/http-service.service';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -35,12 +36,25 @@ export class BookserviceService {
   }
   return this.httpService.postService("https://localhost:44305/api/Book/Add", data, true, header)
 }
+adminupdatebook(bookId: any, data: any) {
+   this.token=localStorage.getItem("token")
+  let header = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+      'x-access-token': this.token 
+    })
+  }
+  return this.httpService.putService("https://localhost:44305/api/Book/Update", data, true, header)
+
+}
+
+
 deletebook(productID: any,token:any) {
   console.log(this.token,productID)
   let header = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization':'Bearer'+this.token,   // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
+      'Authorization':'Bearer'+this.token, 
     })
   }
   return this.httpService.deleteService('Book/deletebook?BookId=' + productID, true, header)

@@ -23,7 +23,7 @@ export class GetallbooksComponent implements OnInit {
 
   getallbooks(){
     this.book.getallbooks().subscribe((res:any)=>{
-      console.log("res ===",res);
+      console.log("Book-Details==",res);
       this.booklist=res.response;
        this.booksCount=res.response.length;
       //  console.log("booklist fetched",this.booklist);

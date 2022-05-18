@@ -8,14 +8,12 @@ import { DataserviceService } from 'src/app/Service/dataservice/dataservice.serv
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  badgecount: any; // done for badge count
+  badgecount: any; 
   fullName: any;
   isSearch = false; 
  
   constructor(private route: Router, private dataservice: DataserviceService) {
-    // this.fullName=localStorage.getItem("fullName");
     this.fullName = localStorage.getItem('fullName');
-    //  this.fullName=localStorage.getItem('email');
 
   }
 
@@ -41,7 +39,7 @@ export class DashboardComponent implements OnInit {
   {
     this.route.navigateByUrl("/dashboard/orders")
   }
-  Admin()
+  Addbook()
   {
     this.route.navigateByUrl("/dashboard/addbook") 
   }

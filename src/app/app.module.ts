@@ -25,12 +25,13 @@ import {MatInputModule} from '@angular/material/input';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import {MatListModule} from '@angular/material/list';
-import {   MatMenuModule } from '@angular/material/menu';
-import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
-import { AddbookComponent } from './Components/addbook/addbook.component';
-import { QuickviewComponent } from './Components/quickview/quickview.component';
+import { MatMenuModule } from '@angular/material/menu'; 
+// import {MatDialogModule,MatDialogRef } from '@angular/material/dialog';
 import { BookandupdateComponent } from './Components/bookandupdate/bookandupdate.component';
-
+import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
+import { CommonModule } from '@angular/common';
+import { AddbookComponent } from './Components/addbook/addbook.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -40,17 +41,17 @@ import { BookandupdateComponent } from './Components/bookandupdate/bookandupdate
     ForgotpasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
-    GetallbooksComponent,
-    AddbookComponent,
-    QuickviewComponent,
     BookandupdateComponent,
+    GetallbooksComponent,
+    AddbookComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,FormsModule,MatCardModule,MatSnackBarModule,MatExpansionModule,MatBadgeModule,
     MatTableModule,MatTooltipModule,MatToolbarModule,MatButtonModule,MatIconModule,MatFormFieldModule,
-    ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule,MatListModule,MatMenuModule
+    ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule,MatListModule,MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
