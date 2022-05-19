@@ -3,13 +3,13 @@
     <mat-card class="matcard " fxLayout="column" fxLayoutAlign="center center" fxLayout.xs="column" fxLayout.sm="column"
         fxFlex.xs="95" fxFlex.sm="60">
         <div class="update" fxLayout="row">
-           <h2 *ngIf="data.isAddBook" >Add book</h2>
+           <!-- <h2  >Add book</h2>
             <h2 *ngIf="data.isAddBook">Update book</h2>
-            <h2 *ngIf="data.isAddBook">Delete book</h2> 
+            <h2 *ngIf="data.isAddBook">Delete book</h2>  -->
         </div>
 
         <div class="formcontainer">
-            <form [formGroup]="bookandupdateForm">
+            <form [formGroup]="bookandupdateForm"(ngSubmit)="onSubmit()">
                 <div class="form" fxLayout="column" fxLayoutAlign="center center">
 
                     <div fxLayout="row" fxLayoutGap="20px">
@@ -59,14 +59,14 @@
 
                         </div>
 
-                        <div class="bookname">
+                         <div class="bookname">
                             <div class="label">
                                 <mat-label>Quantity</mat-label>
                             </div>
                             <div>
                                 <mat-form-field appearance="outline">
 
-                                    <input type="text" formControlName="quantity" matInput placeholder="quantity">
+                                    <input type="text" formControlName="bookquantity" matInput placeholder="quantity">
                                     <mat-error>Enter a quantity While  Adding new Book</mat-error>
                                 </mat-form-field>
 
@@ -84,7 +84,7 @@
                             <div>
                                 <mat-form-field appearance="outline">
 
-                                    <input type="text" formControlName="price" matInput placeholder="price..">
+                                    <input type="text" formControlName="actualprice" matInput placeholder="price..">
                                     <mat-error>Enter a price</mat-error>
                                 </mat-form-field>
 
@@ -109,9 +109,9 @@
                     </div>
 
                      <div style="margin-left: 0px;" fxLayoutAlign="start center">
-                        <button mat-flat-button color="primary"*ngIf="data?.isAddBook"  class="buttonadd">Add
+                        <button mat-flat-button color="primary" (ngSubmit)="onSubmit" class="buttonadd" >Add
                             Book</button>&nbsp;
-                        <button mat-flat-button color="accent" *ngIf="!data?.isAddBook" class="addbutton">Update
+                        <button mat-flat-button color="accent" class="addbutton">Update
                             Book</button>&nbsp;
                         <button mat-flat-button color="warn" class="addbutton">Delete
                                 Book</button>
@@ -123,7 +123,7 @@
             </form>
 
             <div style="margin-left: 30px;" fxLayoutAlign="end end">
-                <button mat-flat-button color="" class="buttonclose" (click)=" close()">Cancel
+                <button mat-flat-button color="" class="buttonclose">Cancel
 
                 </button>
             </div>

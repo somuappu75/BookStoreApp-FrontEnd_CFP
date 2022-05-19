@@ -1,7 +1,7 @@
 <div>
     <div class="container">
       <div>
-        <button class="btn-add"><b>Add Book</b></button>
+        <button class="btn-add"  (click)="AddBook()"><b>Add Book</b></button>
     </div>
         <table>
             <tr>
@@ -23,7 +23,7 @@
               <td>{{book.discountPrice}}</td>
               <td>{{book.bookQuantity}}</td>
                <td class="action">
-                <button ><span style="color: #3371B5; font-size: 14px;"><b>Edit</b></span></button>&nbsp;
+                <!-- <button  (click)="UpdateBook()" ><span style="color: #3371B5; font-size: 14px;"><b>Update</b></span></button>&nbsp; -->
                 <button><span style="color: red; font-size: 14px;"><b>Delete</b></span></button>
               </td>
             </tr>           

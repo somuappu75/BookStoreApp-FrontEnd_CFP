@@ -26,15 +26,15 @@ export class BookserviceService {
    }
    return this.httpService.getService("https://localhost:44305/api/Book/Get", true,header)
  }
- adminaddbook(data: any) {
+ addbook(data: any) {
   this.token = localStorage.getItem("token")
   let header = {
     headers: new HttpHeaders({
       'content-Type': 'application/json',
-      'x-access-token': this.token
+      'Authorization': this.token
     })
   }
-  return this.httpService.postService("https://localhost:44305/api/Book/Add", data, true, header)
+  return this.httpService.postService("https://localhost:44305/api/Book/Add", data, false, header)
 }
 adminupdatebook(bookId: any, data: any) {
    this.token=localStorage.getItem("token")
@@ -59,4 +59,5 @@ deletebook(productID: any,token:any) {
   }
   return this.httpService.deleteService('Book/deletebook?BookId=' + productID, true, header)
 }
+
 }
