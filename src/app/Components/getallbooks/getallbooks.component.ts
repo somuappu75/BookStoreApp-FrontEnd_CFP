@@ -36,6 +36,13 @@ export class GetallbooksComponent implements OnInit {
     
     }
   }
+  quickview(book:any){
+    console.log("book id", book._id);
+    
+    localStorage.setItem('bookId', book._id);
+    this.router.navigateByUrl('dashboard/quickview/' +book._id)
+
+  }
   
 }
 // this.book.usergetallbooks().subscribe((dataReturned:any)=>{

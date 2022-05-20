@@ -1,1 +1,128 @@
-<p>quickcomponent works!</p>
+<!-- <p>quickcomponent works!</p> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+<div>
+    <div class="container" fxLayout="column">
+        <div class="header" fxLayout="row">
+            <p>Home/Book({{bookInfo?.bookquantity}})</p>
+        </div>
+        <div class="description" fxLayout="row">
+            <div class="sampleimg" fxLayout="column">
+                <img class="sample" src="../../../assets/images/Image 11@2x.png" alt="">
+                <img src="" alt="">&nbsp;
+                <img class="sample" src="../../../assets/images/Image 11@2x.png" alt="">
+                <img src="" alt="">
+            </div>
+                <!-- <div class="sampleimg" fxLayout="column">
+                    <img class="sample" src="../../../assets/images/Image 11@2x.png" alt="">
+                    <img src="" alt="">
+                </div> -->
+                
+            <div fxLayout="column">
+                <div class="book" fxLayout="column">
+                    <img src="../../../assets/images/book2x.png" alt="">
+                </div>
+                <div class="options" fxLayout="row">
+                    <div *ngIf="!hide">
+                        <button id="bag" (click)="addToCart()" (click)="switching()">ADD TO BAG</button>
+                    </div>
+                    <div class="cart" *ngIf="hide">
+                        <button id="minus" (click)="minus()">-</button>
+                        <p>{{book_quantity}}</p>
+                        <button id="plus" (click)="plus()">+</button>
+                    </div>
+                    
+                    <div (click)="addWishList()" routerLink="/dashboard/wishlist">
+                        <button id="wishlist">
+                            <!-- <img class="wishlist" src="../../../assets/images/favorite.svg" alt=""> -->
+                            <mat-icon class="wishimg1">favorite</mat-icon>
+                            <p class="text">WISHLIST</p>
+                        </button>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="book_info" fxLayout="column">
+            <div class="book_data" fxLayout="column">
+                <div style="font-size: 20px; color: rgb(77, 77, 74); margin-bottom: 5px;"><b>{{bookInfo?.bookName}}</b>
+                </div>
+                <div style="font-size: 14px; color: rgb(187, 187, 183); margin-bottom: 5px;">by{{bookInfo?.authorName}}
+                </div>
+                <div class="rating">
+                    <p class="p2">4.5</p>
+                    <img src="../../../assets/images/star.svg" alt="">
+                </div>
+                <div class="cost">
+                    <p><b>Rs.{{bookInfo?.discountPrice}}</b></p>
+                    <p><s>Rs.{{bookInfo?.actualprice}}</s></p>
+                </div>
+            </div>
+            <hr>
+            <div fxLayout="column">
+                <ul>
+                    <li><b>Detail</b></li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> labore
+                        et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris<br> nisi ut aliquip ex ea commodo
+                        consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit<br> esse cillum dolore eu fugiat nulla
+                        pariatur.
+                        Excepteur sint occaecat cupidatat non proident,<br> sunt in culpa qui officia deserunt mollit anim id
+                        est laborum.</p>
+                </ul>
+            </div>
+            <div class="book_detail" fxLayout="column">
+                <p>{{bookInfo?.description}}</p>
+            </div>
+            <hr>
+            <div fxLayout="column">
+                <div class="customerfeedback">
+                    <span>Customer Feedback</span>
+                </div>
+
+                <div class="review_box">
+                    <p>Overall Rating</p>
+                    <div class="starContainer">
+                         <div class="star-widget">
+                                <input type="radio" name="rate" id="rate-5" [(ngModel)]="value" value="5">
+                                <label for="rate-5" class="fas fa-star"></label>
+
+                                <input type="radio" name="rate" id="rate-4" [(ngModel)]="value" value="4">
+                                <label for="rate-4" class="fas fa-star"></label>
+
+                                <input type="radio" name="rate" id="rate-3" [(ngModel)]="value" value="3">
+                                <label for="rate-3" class="fas fa-star"></label>
+
+                                <input type="radio" name="rate" id="rate-2" [(ngModel)]="value" value="2">
+                                <label for="rate-2" class="fas fa-star"></label>
+
+                                <input type="radio" name="rate" id="rate-1" [(ngModel)]="value" value="1">
+                                <label for="rate-1" class="fas fa-star"></label>
+                            </div> 
+                    </div>
+                    <div class="textarea">
+                        <textarea cols="30" type="text" placeholder="write your review..." [(ngModel)]="feedback"></textarea>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" (click)="addFeedback()">Submit</button>
+                    </div>
+                </div>
+                <div class="feedback" *ngFor="let feedback of feedbackList">
+                    <div>
+                        <div class="feedback-name">
+                            <span style="color: black; font-size: 15px;">{{feedback.user_id.fullName}}</span>
+                        </div>
+
+                        <div>
+                            <span>{{feedback.rating}}</span>
+                        </div>
+
+                        <div class="feedback-comment">
+                            <span style="color: rgb(121, 119, 119); font-size: 13px;">{{feedback.comment}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

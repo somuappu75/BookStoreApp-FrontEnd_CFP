@@ -32,6 +32,7 @@ import { GetallbooksComponent } from './Components/getallbooks/getallbooks.compo
 import { CommonModule } from '@angular/common';
 import { AddbookComponent } from './Components/addbook/addbook.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { QuickviewComponent } from './Components/quickview/quickview.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     DashboardComponent,
     BookandupdateComponent,
     GetallbooksComponent,
-    AddbookComponent
+    AddbookComponent,
+    QuickviewComponent
   ],
   imports: [
     BrowserModule,

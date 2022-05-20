@@ -11,7 +11,7 @@
    <div class="books_list" fxLayout="row" fxLayoutAlign="center center">
     <div class="bookdata" *ngFor="let book of booklist " fxLayout.sm="column">
         <div class="bookimg">
-            <img class="img1" src="../../../assets/images/Image 11@2x.png" alt="">
+            <img class="img1" src="../../../assets/images/Image 11@2x.png" (click)="quickview(book)">
         </div>
         <div class="bookname">
             {{book.bookName}}

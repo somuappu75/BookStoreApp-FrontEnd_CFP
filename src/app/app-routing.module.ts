@@ -8,6 +8,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { GetallbooksComponent } from './Components/getallbooks/getallbooks.component';
 import { AddbookComponent } from './Components/addbook/addbook.component';
 import { BookandupdateComponent } from './Components/bookandupdate/bookandupdate.component';
+import { QuickviewComponent } from './Components/quickview/quickview.component';
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   children:[
     {path:'Getallbooks',component:GetallbooksComponent},
     {path:'addbook',component:AddbookComponent},
-    {path:'bookandupdate',component:BookandupdateComponent}
+    {path:'bookandupdate',component:BookandupdateComponent},
+    {path:'quickview/:id',component:QuickviewComponent},
   ],
 },
 ];
