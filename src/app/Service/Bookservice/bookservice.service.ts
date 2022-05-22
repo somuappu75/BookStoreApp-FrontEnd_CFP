@@ -21,7 +21,7 @@ export class BookserviceService {
    let header ={
      headers: new HttpHeaders({
        'Content-type': 'application/json',
-       'Authorization': this.token
+       'x-access-token': this.token
      })
    }
    return this.httpService.getService("https://localhost:44305/api/Book/Get", true,header)
@@ -129,9 +129,9 @@ getFeedback(id:any){
       'x-access-token': this.token
      })
   }
-  return this.httpService.getService('/bookstore_user/get/feedback/'+id, true, header)
+  return this.httpService.getService("https://localhost:44305/api/Feedback/Get/"+id, true, header)
 }
-useraddtobag(productID: any) {  //here we are using product id as it is used in backend API 
+useraddtobag(BookId: any) {  //here we are using product id as it is used in backend API 
 
   let header = {
     headers: new HttpHeaders({
@@ -139,9 +139,9 @@ useraddtobag(productID: any) {  //here we are using product id as it is used in 
       'x-access-token': this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
     })
   }
-  return this.httpService.postService('Cart/addBooksInCart/' + productID, {}, true, header)
+  return this.httpService.postService('Cart/addBooksInCart/' + BookId, {}, true, header)
 }
-useraddtowishlist(productID: any) {  //here we are using product id as it is used in backend API 
+useraddtowishlist(BookId: any) {  //here we are using product id as it is used in backend API 
 
   let header = {
     headers: new HttpHeaders({
@@ -149,6 +149,6 @@ useraddtowishlist(productID: any) {  //here we are using product id as it is use
       'x-access-token': this.token
     })
   }
-  return this.httpService.postService('WishList/addBooksInWishList' + productID, {}, true, header)
+  return this.httpService.postService('WishList/addBooksInWishList' + BookId, {}, true, header)
 }
 }

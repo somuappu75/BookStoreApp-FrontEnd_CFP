@@ -33,6 +33,8 @@ import { CommonModule } from '@angular/common';
 import { AddbookComponent } from './Components/addbook/addbook.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { QuickviewComponent } from './Components/quickview/quickview.component';
+import { GetcartComponent } from './Components/getcart/getcart.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { QuickviewComponent } from './Components/quickview/quickview.component';
     BookandupdateComponent,
     GetallbooksComponent,
     AddbookComponent,
-    QuickviewComponent
+    QuickviewComponent,
+    GetcartComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,7 @@ import { QuickviewComponent } from './Components/quickview/quickview.component';
     BrowserAnimationsModule,FormsModule,MatCardModule,MatSnackBarModule,MatExpansionModule,MatBadgeModule,
     MatTableModule,MatTooltipModule,MatToolbarModule,MatButtonModule,MatIconModule,MatFormFieldModule,
     ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule,MatListModule,MatMenuModule,
-    MatDialogModule
+    MatDialogModule,MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

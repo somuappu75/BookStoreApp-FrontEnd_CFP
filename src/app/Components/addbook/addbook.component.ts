@@ -16,8 +16,8 @@ export class AddbookComponent implements OnInit {
   bookName: any;
   author: any;
   description: any;
-  quantity: any;
-  price: any;
+  bookQuantity: any;
+  actualPrice: any;
   discountPrice: any;
   isAddBook: any;
   token:any
@@ -51,8 +51,8 @@ export class AddbookComponent implements OnInit {
         this.bookName = result;
         this.author = result;
         this.description = result;
-        this.quantity = result;
-        this.price = result;
+        this.bookQuantity = result;
+        this.actualPrice = result;
         this.discountPrice = result;
   
       });
@@ -74,8 +74,8 @@ export class AddbookComponent implements OnInit {
         this.bookName = result;
         this.author = result;
         this.description = result;
-        this.quantity = result;
-        this.price = result;
+        this.bookQuantity = result;
+        this.actualPrice = result;
         this.discountPrice = result;
   
   

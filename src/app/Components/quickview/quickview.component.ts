@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { BookserviceService } from 'src/app/Service/Bookservice/bookservice.service';
 import { DataserviceService } from 'src/app/Service/dataservice/dataservice.service';
 
@@ -10,13 +11,16 @@ import { DataserviceService } from 'src/app/Service/dataservice/dataservice.serv
 })
 export class QuickviewComponent implements OnInit {
   bookInfo: any;
-  bookId:any;
+  bookid: any;
   hide:boolean=false
   book_quantity:number=0;
   
   feedback:any;
   value:any;
   feedbackList:any;
+  public bookId$: Observable<any> // 'id' is bad name for variable, remember about code readability;
+  | undefined // 'id' is bad name for variable, remember about code readability;
+
 
   constructor(private book:BookserviceService,private route:ActivatedRoute,private dataservice:DataserviceService,private router:Router) { }
 
@@ -24,9 +28,12 @@ export class QuickviewComponent implements OnInit {
     // this.router.routeReuseStrategy.shouldReuseRoute = () =>{
     //   return false;
     // }
+
+    this.bookid = this.route.snapshot.paramMap.get("bookId");
+    console.log(this.bookid);
     this.getBookDetail();
-    this.bookId=this.route.snapshot.params['id']
-    // console.log("bookinfo received", this.bookInfo);
+    // this.bookId=this.route.snapshot.params['id']
+    // // console.log("bookinfo received", this.bookInfo);
     this.getFeedback();
 
   }
@@ -34,7 +41,8 @@ export class QuickviewComponent implements OnInit {
   getBookDetail(){
     this.book.getallbooks().subscribe((res:any)=>{ 
       res.result.forEach((element:any) => {
-        if(element._id == this.bookId){
+        console.log(element.bookId)
+        if(element.bookId == this.bookid){
           this.bookInfo = element;
           console.log("boofInfo", this.bookInfo);
         }  
@@ -47,7 +55,7 @@ export class QuickviewComponent implements OnInit {
   }
   
   addWishList(){
-    this.book.addWishList(this.bookId).subscribe((res:any)=>{
+    this.book.addWishList(this.bookid).subscribe((res:any)=>{
       console.log("wishlist created",res);
     }),
     (    error: any)=>{
@@ -104,7 +112,7 @@ plus(){
 addToCart(){
   this.book_quantity++;
   this.sendQuantiy(this.book_quantity);
-  this.book.addCartItems(this.bookId).subscribe((res:any)=>{
+  this.book.addCartItems(this.bookid).subscribe((res:any)=>{
     console.log("cart items fetched",res);
   }),
   (    error: any)=>{
@@ -118,7 +126,7 @@ addFeedback(){
     comment: this.feedback,
     rating: this.value
   }
-  this.book.addFeedback(this.bookId, data).subscribe((res:any)=>{
+  this.book.addFeedback(this.bookid, data).subscribe((res:any)=>{
     console.log(res);
     // window.location.reload();
     this.ngOnInit();
@@ -126,8 +134,8 @@ addFeedback(){
 }
 
 getFeedback(){
-  console.log("feedback list",this.bookId);
-  this.book.getFeedback(this.bookId).subscribe((res:any)=>{
+  console.log("feedback list",this.bookid);
+  this.book.getFeedback(this.bookid).subscribe((res:any)=>{
     console.log("get feedback list",res.result);
     this.feedbackList = res.result;
   })
