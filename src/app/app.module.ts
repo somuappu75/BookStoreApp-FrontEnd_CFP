@@ -35,6 +35,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { QuickviewComponent } from './Components/quickview/quickview.component';
 import { GetcartComponent } from './Components/getcart/getcart.component';
 import {MatSelectModule} from '@angular/material/select';
+import { WishlistComponent } from './Components/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {MatSelectModule} from '@angular/material/select';
     GetallbooksComponent,
     AddbookComponent,
     QuickviewComponent,
-    GetcartComponent
+    GetcartComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,

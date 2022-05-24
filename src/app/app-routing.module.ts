@@ -10,6 +10,7 @@ import { AddbookComponent } from './Components/addbook/addbook.component';
 import { BookandupdateComponent } from './Components/bookandupdate/bookandupdate.component';
 import { QuickviewComponent } from './Components/quickview/quickview.component';
 import { GetcartComponent } from './Components/getcart/getcart.component';
+import { WishlistComponent } from './Components/wishlist/wishlist.component';
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
     {path:'cart',component:GetcartComponent},
     {path:'bookandupdate',component:BookandupdateComponent},
     {path:'quickview/:id',component:QuickviewComponent},
+    {path:'wishlist',component:WishlistComponent},
   ],
 },
 ];
