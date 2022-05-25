@@ -43,5 +43,8 @@ export class DashboardComponent implements OnInit {
   {
     this.route.navigateByUrl("/dashboard/addbook") 
   }
-
+  updateText(filteredString: any){
+    console.log("string msg", filteredString.target.value);
+    this.dataservice.updateData(filteredString.target.value);
+}
 }

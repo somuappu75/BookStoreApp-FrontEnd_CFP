@@ -37,6 +37,7 @@ import { GetcartComponent } from './Components/getcart/getcart.component';
 import {MatSelectModule} from '@angular/material/select';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
 import { AuthguardServiceService } from './Service/authguardservice/authguard-service.service';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { AuthguardServiceService } from './Service/authguardservice/authguard-se
     AddbookComponent,
     QuickviewComponent,
     GetcartComponent,
-    WishlistComponent
+    WishlistComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

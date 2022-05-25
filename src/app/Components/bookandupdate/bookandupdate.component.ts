@@ -11,7 +11,7 @@ import { BookserviceService } from 'src/app/Service/Bookservice/bookservice.serv
 })
 export class BookandupdateComponent implements OnInit {
   bookandupdateForm!: FormGroup;
-  submitted = false;
+ // submitted = false;
 
   constructor(private form:FormBuilder,private book:BookserviceService,private router:Router ) { }
 
@@ -27,7 +27,7 @@ export class BookandupdateComponent implements OnInit {
     });
   }
     onSubmit(){
-     this.submitted=true;
+   //  this.submitted=true;
       console.log("inputs", this.bookandupdateForm.value);
       if(this.bookandupdateForm.valid){
         console.log("valid-Details",this.bookandupdateForm.value);

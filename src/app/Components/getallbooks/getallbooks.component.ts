@@ -18,6 +18,7 @@ export class GetallbooksComponent implements OnInit {
 
   ngOnInit(): void {
     this.getallbooks()
+    this.dataservice.store.subscribe(x => this.filteredString = x);
     
   }
 
