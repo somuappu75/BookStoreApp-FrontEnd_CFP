@@ -3,7 +3,7 @@
 <div>
     <div class="container" fxLayout="column">
         <div class="header" fxLayout="row">
-            <p>Home/Book({{bookInfo?.bookquantity}})</p>
+            <p>Home/Book{{bookInfo?.bookquantity}}</p>
         </div>
         <div class="description" fxLayout="row">
             <div class="sampleimg" fxLayout="column">
@@ -12,7 +12,7 @@
                 <img class="sample" src="../../../assets/images/Image 11@2x.png" alt="">
                 <img src="" alt="">
             </div>
-                <!-- <div class="sampleimg" fxLayout="column">
+                 <!-- <div class="sampleimg" fxLayout="column">
                     <img class="sample" src="../../../assets/images/Image 11@2x.png" alt="">
                     <img src="" alt="">
                 </div> -->
@@ -107,6 +107,24 @@
                         <button type="submit" (click)="addFeedback()">Submit</button>
                     </div>
                 </div>
+                <div class="userfeedback"  fxLayout="column wrap"
+                fxLayoutAlign="start start" fxLayoutGap="10px">
+                <div>
+                    <div fxLayoutGap="10px">
+                        <button mat-mini-fab class="shortname">Somanth Ha</button>
+                        <span class="feedbackname"> book for all</span>
+                    </div>
+    
+                    <div>
+                        <span class="feedbackrating"> 5</span>
+    
+                    </div>
+    
+                    <div>
+                        <span class="feedbackcomment"> To go throug</span>
+    
+                    </div>
+                </div>
                 <div class="feedback" *ngFor="let feedback of feedbackList">
                     <div>
                         <div class="feedback-name">
@@ -121,8 +139,12 @@
                             <span style="color: rgb(121, 119, 119); font-size: 13px;">{{feedback.comment}}</span>
                         </div>
                     </div>
+                    
                 </div>
             </div>
+        
+      
+
         </div>
     </div>
-</div>
+</div> 

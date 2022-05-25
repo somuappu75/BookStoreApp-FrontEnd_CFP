@@ -31,7 +31,7 @@ export class BookserviceService {
   let header = {
     headers: new HttpHeaders({
       'content-Type': 'application/json',
-      'Authorization': this.token
+      'x-access-token': this.token 
     })
   }
   return this.httpService.postService("https://localhost:44305/api/Book/Add", data, false, header)
@@ -139,9 +139,9 @@ useraddtobag(BookId: any) {  //here we are using product id as it is used in bac
       'x-access-token': this.token    // use x-acces-token instead of authorization as it is coming from backend otherwise it will throw error
     })
   }
-  return this.httpService.postService('Cart/addBooksInCart/' + BookId, {}, true, header)
+  return this.httpService.postService('"https://localhost:44305/api/Cart/Add' + BookId, {}, true, header)
 }
-useraddtowishlist(BookId: any) {  //here we are using product id as it is used in backend API 
+useraddtowishlist(id: any) {  //here we are using product id as it is used in backend API 
 
   let header = {
     headers: new HttpHeaders({
@@ -149,6 +149,6 @@ useraddtowishlist(BookId: any) {  //here we are using product id as it is used i
       'x-access-token': this.token
     })
   }
-  return this.httpService.postService('WishList/addBooksInWishList' + BookId, {}, true, header)
+  return this.httpService.postService('https://localhost:44305/api/Wishlist/Get' + id, {}, true, header)
 }
 }
