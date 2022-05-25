@@ -11,13 +11,15 @@ import { BookandupdateComponent } from './Components/bookandupdate/bookandupdate
 import { QuickviewComponent } from './Components/quickview/quickview.component';
 import { GetcartComponent } from './Components/getcart/getcart.component';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
+import { AuthenticationGuard } from './Components/authentication.guard';
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
+  {path:'',redirectTo:"/login",pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'addbook',component:AddbookComponent},
   {path:'forgot',component:ForgotpasswordComponent},
   {path:'reset',component:ResetPasswordComponent},
-  {path:'dashboard',component:DashboardComponent,
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],
   children:[
     {path:'Getallbooks',component:GetallbooksComponent},
     {path:'addbook',component:AddbookComponent},

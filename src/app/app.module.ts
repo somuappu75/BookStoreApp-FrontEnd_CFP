@@ -36,6 +36,7 @@ import { QuickviewComponent } from './Components/quickview/quickview.component';
 import { GetcartComponent } from './Components/getcart/getcart.component';
 import {MatSelectModule} from '@angular/material/select';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
+import { AuthguardServiceService } from './Service/authguardservice/authguard-service.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,9 @@ import { WishlistComponent } from './Components/wishlist/wishlist.component';
     ReactiveFormsModule,MatRadioModule,HttpClientModule,MatInputModule,MatListModule,MatMenuModule,
     MatDialogModule,MatSelectModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService,
+  ],
   bootstrap: [AppComponent]
   
 })
