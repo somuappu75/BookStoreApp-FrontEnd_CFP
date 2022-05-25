@@ -1,0 +1,67 @@
+.place-order{
+    width: 280px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 500px;
+}
+.text{
+    text-align: center;
+    font-size: 18px;
+    color: #696767;
+    opacity: 1;
+}
+
+table{
+    width: 64%;
+    margin-left: 240px;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+// border: 1px solid #DCDCDC;
+}
+
+table,tr, td {
+    border: 1px solid lightgray;
+}
+
+th{
+    background-color: #fafafa;
+}
+
+td{
+    background-color: #ffffff;
+    padding: 15px 0;
+}
+
+.btn-continue{
+    margin-top: 28px;
+    margin-left: 42%;
+    width: 200px;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    background-color: #3371B5;
+    color: #f5f3f3;
+    font-size: 14px;
+    cursor: pointer;
+}
+#marcol
+{
+    color: red;
+}
+.glow {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    margin-top: 0px;;
+    margin-left: 70%;
+    margin-bottom: auto;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }

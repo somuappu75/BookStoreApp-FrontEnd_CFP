@@ -12,6 +12,7 @@ import { QuickviewComponent } from './Components/quickview/quickview.component';
 import { GetcartComponent } from './Components/getcart/getcart.component';
 import { WishlistComponent } from './Components/wishlist/wishlist.component';
 import { AuthenticationGuard } from './Components/authentication.guard';
+import { OrderComponent } from './Components/order/order.component';
 const routes: Routes = [
   {path:'register',component:RegisterComponent},
   {path:'',redirectTo:"/login",pathMatch:'full'},
@@ -27,6 +28,7 @@ const routes: Routes = [
     {path:'bookandupdate',component:BookandupdateComponent},
     {path:'quickview/:id',component:QuickviewComponent},
     {path:'wishlist',component:WishlistComponent},
+    {path:'order',component:OrderComponent},
   ],
 },
 ];
