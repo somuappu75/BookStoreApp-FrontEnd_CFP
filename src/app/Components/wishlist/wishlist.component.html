@@ -1,50 +1,24 @@
-<div class="section" fxLayout="column">
-
-    <mat-card class="wishlist" fxLayoutAlign="start center">
-        <!-- <span>My Wishlist ({{countlist}})</span> -->
-    </mat-card>
-  
-    <mat-card class="book" fxLayout="row" fxLayoutAlign="start center " fxFill >
-  
-        <div fxLayout="column" fxLayoutGap="20px">
-            <div class="cartbook" fxLayout="row" fxLayoutAlign="start center">
-  
-                <div>
-                    <div class="image" fxLayoutAlign="start center">
-                        <img class="bookImage" src="../../../assets/Image 11@2x.png">
-                    </div>
+<div>
+    <div class="container">
+        <div class="header">
+            <p>Home/My wishlist</p>
+        </div>
+        <div class="wishlist_head" fxLayout="column">
+            <p><b>My Wishlist ({{wishListCount}})</b></p>
+        </div>
+        <div class="book" fxLayout="row" *ngFor="let list of wishlist">
+            <div><img class="bookImage" src="../../../assets/images/book2x.png"></div>
+            <div class="bookinfo">
+                <div class="bookName">{{list.bookmodel.bookName}}</div>
+                <div class="author">by {{list.bookmodel.author}}</div>
+                <div class="cost">
+                    <p><b>Rs.{{list.bookmodel.discountPrice}}</b></p>
+                    <p><s>Rs.{{list.bookmodel.price}}</s></p>
                 </div>
-  
-                <div class="entirebook" fxLayout="column" fxLayout.sm="column">
-  
-                    <div class="bookname">
-                        <!-- {{book.bookModel.bookName}} -->
-                    </div>
-                    <div class="author">
-                        <!-- by {{book.bookModel.authorName}} -->
-                    </div>
-                    <div class="price" fxLayout="row" fxLayoutGap="10px">
-                        <div class="discountprice">
-                            <!-- Rs.{{book.bookModel.discountPrice}} -->
-                        </div>
-                        <div class="originalprice">
-                            <!-- <del> Rs.{{book.bookModel.originalPrice}} </del> -->
-                        </div>
-                    </div>
-  
-                </div>
-  
-  
             </div>
-  
+            <div class="delete" fxLayout="column">
+                <img style="color: #9D9D9D; margin-top: 25px;" src="../../../assets/images/delete_black_24dp.svg">
+            </div>
         </div>
-  
-        <div class="rightdiv" fxLayout="column" fxLayoutAlign="end center">
-  
-            <img class="deleteimg" src="../../../assets/delete_black_24dp (1).svg">
-  
-        </div>
-  
-    </mat-card>
-  
-  </div>
+    </div>
+</div>

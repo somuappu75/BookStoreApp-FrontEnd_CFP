@@ -12,7 +12,7 @@ export class AddbookComponent implements OnInit {
   booklist: any[]=[];
   count: any;
   allbooks: any[]=[];
-  bookid:any;  // used as a variable to store book id's used in activated route part below
+  bookid:any;
   bookName: any;
   author: any;
   description: any;
@@ -32,8 +32,6 @@ export class AddbookComponent implements OnInit {
     this.book.getallbooks().subscribe((res:any)=>{
       console.log("Book-details-from-backend",res);
       this.booklist=res.response;
-      // this.booksCount=res.result.length;
-      //  console.log("booklist fetched",this.booklist);
        console.log("BookData",this.getBooks);
       
     })

@@ -1,9 +1,9 @@
 <!-- <p>quickcomponent works!</p> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 <div>
     <div class="container" fxLayout="column">
         <div class="header" fxLayout="row">
-            <p>Home/Book{{bookInfo?.bookquantity}}</p>
+            <p>Home/Book({{bookInfo?.quantity}})</p>
         </div>
         <div class="description" fxLayout="row">
             <div class="sampleimg" fxLayout="column">
@@ -21,6 +21,7 @@
                 <div class="book" fxLayout="column">
                     <img src="../../../assets/images/book2x.png" alt="">
                 </div>
+
                 <div class="options" fxLayout="row">
                     <div *ngIf="!hide">
                         <button id="bag" (click)="addToCart()" (click)="switching()">ADD TO BAG</button>
@@ -43,8 +44,8 @@
             </div>
         </div>
         <div class="book_info" fxLayout="column">
-            <div class="book_data" fxLayout="column">
-                <div style="font-size: 20px; color: rgb(77, 77, 74); margin-bottom: 5px;"><b>({{bookInfo?.BookName}})</b>
+            <div class="book_data"fxLayout="column">
+                <div style="font-size: 20px; color: rgb(77, 77, 74); margin-bottom: 5px;"><b>{{bookInfo?.BookName}}</b>
                 </div>
                 <div style="font-size: 14px; color: rgb(187, 187, 183); margin-bottom: 5px;">by{{bookInfo?.authorName}}
                 </div>
@@ -128,7 +129,7 @@
                 <div class="feedback" *ngFor="let feedback of feedbackList">
                     <div>
                         <div class="feedback-name">
-                            <span style="color: black; font-size: 15px;">{{feedback.user_id.fullName}}</span>
+                            <span style="color: black; font-size: 15px;">{{feedback.FeedbackId.fullName}}</span>
                         </div>
 
                         <div>

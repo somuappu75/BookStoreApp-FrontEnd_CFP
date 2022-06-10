@@ -8,7 +8,6 @@ import { BookserviceService } from 'src/app/Service/Bookservice/bookservice.serv
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
-
   wishListCount:any;
   wishlist:any;
   constructor(private book:BookserviceService,private router:Router) { }
@@ -31,15 +30,14 @@ getWishListBook(){
    })
 }
 deleteList(list:any){
-   this.book.removeWishList(list.bookid._id).subscribe((res:any)=>{
+   this.book.removeWishList(list._id._id).subscribe((res:any)=>{
     console.log("wishlist item deleted",res);
     // window.location.reload();
     this.ngOnInit();
-  }),
-  (    error: any)=>{
-  console.log(error);
+  // }, error=>{
+  //   console.log(error);
+  })
+}
 
-}
-}
 
 }

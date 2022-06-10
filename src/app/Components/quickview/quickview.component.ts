@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { BookserviceService } from 'src/app/Service/Bookservice/bookservice.service';
 import { DataserviceService } from 'src/app/Service/dataservice/dataservice.service';
 
@@ -18,9 +17,6 @@ export class QuickviewComponent implements OnInit {
   feedback:any;
   value:any;
   feedbackList:any;
-  public bookId$: Observable<any> // 'id' is bad name for variable, remember about code readability;
-  | undefined // 'id' is bad name for variable, remember about code readability;
-
 
   constructor(private book:BookserviceService,private route:ActivatedRoute,private dataservice:DataserviceService,private router:Router) { }
 
@@ -28,31 +24,32 @@ export class QuickviewComponent implements OnInit {
     // this.router.routeReuseStrategy.shouldReuseRoute = () =>{
     //   return false;
     // }
-
-    this.bookid = this.route.snapshot.paramMap.get("bookId");
-    console.log(this.bookid);
     this.getBookDetail();
+    this.bookid=this.route.snapshot.params['id']
+   // console.log(this.bookid);
     // this.bookId=this.route.snapshot.params['id']
-    // // console.log("bookinfo received", this.bookInfo);
-    this.getFeedback();
+     console.log("bookinfo received", this.bookInfo);
+    //this.getFeedback();
 
   }
 
   getBookDetail(){
     this.book.getallbooks().subscribe((res:any)=>{ 
       res.result.forEach((element:any) => {
-        console.log(element.bookId)
-        if(element.bookId == this.bookid){
+        if(element._id == this.bookid){
           this.bookInfo = element;
           console.log("boofInfo", this.bookInfo);
         }  
       });
-      (    error: any)=>{
-        console.log(error);
-      
-      }
+    
+    // }, (    error: any)=>{
+    //   console.log(error);
+  
     })
   }
+  
+  
+  
   
   addWishList(){
     this.book.addWishList(this.bookid).subscribe((res:any)=>{

@@ -34,7 +34,7 @@ export class BookserviceService {
       'x-access-token': this.token 
     })
   }
-  return this.httpService.postService("https://localhost:44305/api/Book/Add", data, false, header)
+  return this.httpService.postService("https://localhost:44305/api/Book/Add", data, true, header)
 }
 adminupdatebook(bookId: any, data: any) {
    this.token=localStorage.getItem("token")
@@ -119,7 +119,7 @@ addFeedback(id:any, data:any){
       'x-access-token': this.token
      })
   }
-  return this.httpService.postService('/bookstore_user/add/feedback/'+id, data, true, header)
+  return this.httpService.postService("https://localhost:44305/api/Feedback/Add/"+id, data, true, header)
 }
 
 getFeedback(id:any){

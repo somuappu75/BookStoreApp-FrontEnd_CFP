@@ -26,14 +26,6 @@ export class RegisterComponent implements OnInit {
     }); 
   }
 
-  // admin(){
-  //   this.category = true;
-  // }
-
-  // userReg(){
-  //   this.category = false;
-  // }
-
   onSubmit(){
     this.submitted=true;
     console.log("inputs", this.registerForm.value);
